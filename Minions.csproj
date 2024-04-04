@@ -1,0 +1,812 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{744F0D52-AC9B-4D6A-A419-4D9D2A65BF01}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Minions</RootNamespace>
+    <AssemblyName>Minions</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.118.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.118.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.SQLite.EF6.1.0.118.0\lib\net46\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.118.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.SQLite.Linq.1.0.118.0\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Calendar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calendar.Designer.cs">
+      <DependentUpon>Calendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gps.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gps.Designer.cs">
+      <DependentUpon>Gps.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home-Control.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home-Control.Designer.cs">
+      <DependentUpon>Home-Control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Internet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Internet.Designer.cs">
+      <DependentUpon>Internet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Loading_page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loading_page.Designer.cs">
+      <DependentUpon>Loading_page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage_bathroom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage_bathroom.Designer.cs">
+      <DependentUpon>Manage_bathroom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage_bedroom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage_bedroom.Designer.cs">
+      <DependentUpon>Manage_bedroom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage_kitchen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage_kitchen.Designer.cs">
+      <DependentUpon>Manage_kitchen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage_lights.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage_lights.Designer.cs">
+      <DependentUpon>Manage_lights.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage_livingroom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage_livingroom.Designer.cs">
+      <DependentUpon>Manage_livingroom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage_security.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage_security.Designer.cs">
+      <DependentUpon>Manage_security.cs</DependentUpon>
+    </Compile>
+    <Compile Include="My-Pets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My-Pets.Designer.cs">
+      <DependentUpon>My-Pets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pet_camera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pet_camera.Designer.cs">
+      <DependentUpon>Pet_camera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Shoe_rack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shoe_rack.Designer.cs">
+      <DependentUpon>Shoe_rack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shopping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shopping.Designer.cs">
+      <DependentUpon>Shopping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Unlock_house.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Unlock_house.Designer.cs">
+      <DependentUpon>Unlock_house.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Calendar.resx">
+      <DependentUpon>Calendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gps.resx">
+      <DependentUpon>Gps.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home-Control.resx">
+      <DependentUpon>Home-Control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Internet.resx">
+      <DependentUpon>Internet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loading_page.resx">
+      <DependentUpon>Loading_page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage_bathroom.resx">
+      <DependentUpon>Manage_bathroom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage_bedroom.resx">
+      <DependentUpon>Manage_bedroom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage_kitchen.resx">
+      <DependentUpon>Manage_kitchen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage_lights.resx">
+      <DependentUpon>Manage_lights.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage_livingroom.resx">
+      <DependentUpon>Manage_livingroom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage_security.resx">
+      <DependentUpon>Manage_security.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My-Pets.resx">
+      <DependentUpon>My-Pets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pet_camera.resx">
+      <DependentUpon>Pet_camera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Shoe_rack.resx">
+      <DependentUpon>Shoe_rack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shopping.resx">
+      <DependentUpon>Shopping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Unlock_house.resx">
+      <DependentUpon>Unlock_house.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minions.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minions12.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minions4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minions22.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minion_login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minions_meme3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minions_MEME.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minions_meme2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minions_headquarters.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-smarthome-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-schedule-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-pets-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-wi-fi-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-internet-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-shopping-cart-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-shopping-cart-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-voice-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minions26.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minionext.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bathroom.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bathroom0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bedroom.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bedroom0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kitchen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kitchen0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\livingroom.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\livingroom0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minion_light2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minion_light1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minionhouse.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minion_cleaning house.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bulbs.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GPS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bulb2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\original_157296574.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\original_157296595.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10503_ext_02_en_0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\586e1259651de13d138a39283b5203f9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3ee36f27793457.559ec8a8f2b29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Despicable-Me-Minion-Mayhem-600X3o0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minions-post-together-eygvbm6lby2tt30s-eygvbm6lby2tt30s.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Competition3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2b5a9227-b6c7-4692-af13-d530ec1fa5b4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-password-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-living-room-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-kitchen-room-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-light-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-bedroom-interior-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-bath-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-music-folder-90.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-skip-to-start-90.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-end-90.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-play-button-circled-90.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-stop-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-pause-button-90.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-pin-pad-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\65-Best-Funny-Minion-Quotes-And-hilarious-pictures-to-laugh-7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-stop-circled-90.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-bullet-camera-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-bullet-camera-96flippedpng.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alarm.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Washing Machine_stopped.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Washing Machine_working.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Washing Machine_stopped1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-controller-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-temperature-low-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-temperature-high-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tenor %281%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tv1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\best 92.6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\best 92.61.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\screenshot_5_41.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMAGINE897.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VELVET-96.8-LOGO-TRANSPARENT-SQUARE-300X300.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %282%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images1png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tenor.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-oven-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-smart-fridge-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-coffee-maker-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\18-Of-The-Best-Minion-Jokes-Quotes-And-Sayings-5292-11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-shoe-rack-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minions21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2022-11-16 16_42_44-Window.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2022-11-16 16_42_28-Window.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2022-11-16 16_42_06-Window.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2022-11-16 16_41_56-Window.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2022-11-16 16_41_39-Window.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\air.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\up_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\air-on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grill-on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down-on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\up_down-on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\up-on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_kitchen-eye-on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2022-11-16 18_05_53-Window.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2022-11-16 18_05_53-Window1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2022-11-16 18_05_14-Window.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2022-11-16 18_05_14-Window1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2022-11-16 18_06_15-Window.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2022-11-16 18_06_15-Window1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_kitchen-eye-off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\B_kitchen_eye_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\single.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\double.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cappuccino.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\latte.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\milk froth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clean.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ON_OFF BUTTON_ON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SINGLE_ON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DOUBLE_ON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CAPPUCCINO_ON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LATTE_ON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MILK FROTH_ON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CLEAN_ON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\papoytsothiki.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minions27.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\papoytsothiki1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\athletic_shoes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minions_shoes1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minions_shoes.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minions-powered-by-bananas-print-frame_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minions Birthday Invitation - Made with PosterMyWall %282%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boat_shoes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boots.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\casual_boots.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\casual_shoes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\formal_shoes1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\formal_shoes2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mocassins.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sandals.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\slippers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-lock-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-unlock-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-lock-961.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minion_ambulance.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minion_police.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-door-sensor-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-closed-window-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-open-window-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-door-sensor-error-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\camera_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\camera1_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\automatic-pet-feeder.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat feeder.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\petloverminion.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minion cat.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-movies-folder-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-video-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minioncam-1-600x308.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minions31.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minions17.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minions28.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minions29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minions32.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minions30.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minions50.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets'))" />
+  </Target>
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
+</Project>
